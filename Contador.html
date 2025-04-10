@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de Días Juntos</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background: #ffe6e6;
+      color: #333;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+    #contador {
+      font-size: 3em;
+      color: #e60073;
+    }
+  </style>
+</head>
+<body>
+  <h1>💖 Días juntos 💖</h1>
+  <div id="contador">0</div>
+
+  <script>
+    // Reemplaza con la fecha en que comenzaron a salir (AÑO, MES (0-11), DÍA)
+    const fechaInicio = new Date(2023, 6, 15); // Ejemplo: 15 de julio de 2023
+
+    function actualizarContador() {
+      const hoy = new Date();
+      const diferencia = hoy - fechaInicio;
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      document.getElementById("contador").textContent = dias;
+    }
+
+    actualizarContador();
+  </script>
+</body>
+</html>
